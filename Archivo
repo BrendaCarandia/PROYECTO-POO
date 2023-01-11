@@ -1,0 +1,40 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileFilter;
+import javax.swing.filechooser.FileNameExtensionFilter;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner entrada = null;
+        //Se crea el JFileChooser. Se le indica que la ventana se abra en el directorio actual                    
+        JFileChooser fileChooser = new JFileChooser(".");      
+        //Se crea el filtro. El primer parámetro es el mensaje que se muestra,
+        //el segundo es la extensión de los ficheros que se van a mostrar      
+        FileFilter filtro = new FileNameExtensionFilter("Documento de texto(.txt)", " txt"); 
+        //Se le asigna al JFileChooser el filtro
+        fileChooser.setFileFilter(filtro);
+        //se muestra la ventana
+        int valor = fileChooser.showOpenDialog(fileChooser);
+        if (valor == JFileChooser.APPROVE_OPTION) {
+            String ruta = fileChooser.getSelectedFile().getAbsolutePath();
+            try {
+                File f = new File(ruta);
+                entrada = new Scanner(f);
+                while (entrada.hasNext()) {
+                    System.out.println(entrada.nextLine());
+                }
+            } catch (FileNotFoundException e) {
+                System.out.println(e.getMessage());
+            } finally {
+                if (entrada != null) {
+                    entrada.close();
+                }
+            }
+        } else {
+            System.out.println("No se ha seleccionado ningún fichero");
+        }
+    }
+}
