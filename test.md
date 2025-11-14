@@ -360,6 +360,8 @@ votacion_digital/
         └── main.js         # Archivos JavaScript (actualmente vacío, lógica en templates)
 ```
 
+---
+
 
 ## 5. Implementación Detallada del Backend
 
