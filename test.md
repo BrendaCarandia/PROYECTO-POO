@@ -305,7 +305,7 @@ pip list
 
 **Propósito:** Verificar con que versiones se están trabajando en el proyecto
 
-```
+
 | Package | Versión |
 |---|---|
 | blinker | 1.9.0 |
@@ -327,7 +327,7 @@ pip list
 | typing_extensions | 4.15.0 |
 | Werkzeug | 3.1.3 |
 | WTForms | 3.2.1 |
-```
+
 
 
 ## 4. Estructura del Proyecto
@@ -361,9 +361,9 @@ votacion_digital/
 ```
 
 
-5. Implementación Detallada del Backend
+## 5. Implementación Detallada del Backend
 
-5.1. config.py - Configuración de la Aplicación
+### 5.1. config.py - Configuración de la Aplicación
 
 Este archivo define las configuraciones esenciales para la aplicación Flask, incluyendo la clave secreta para seguridad y la URI de la base de datos.
 
