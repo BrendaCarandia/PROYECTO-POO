@@ -298,7 +298,6 @@ pip install Flask Flask-SQLAlchemy Flask-Login Flask-WTF cryptography
 pip list
 ```
 
----
 #### 3.2.5. Versiones de los paquetes instalados
 
 &nbsp;
@@ -328,6 +327,7 @@ pip list
 | Werkzeug | 3.1.3 |
 | WTForms | 3.2.1 |
 
+---
 
 
 ## 4. Estructura del Proyecto
